@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Registration Form</string>
+
+    <string-array name="citylist">
+        <item>Select City...</item>
+        <item>Amreli</item>
+        <item>Ahmedabad</item>
+        <item>Vadodara</item>
+        <item>Bhuj</item>
+        <item>Junagadh</item>
+        <item>Rajkot</item>
+        <item>Jamnagar</item>
+        <item>Surat</item>
+    </string-array>
+</resources>

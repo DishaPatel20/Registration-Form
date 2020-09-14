@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="cursive"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Registration Form"
+        android:textColor="#100101"
+        android:textSize="45sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Enter first name"
+        android:inputType="textEmailAddress"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/lname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Enter last name"
+        android:inputType="textEmailAddress"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fname" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Enter email as Username"
+        android:inputType="textEmailAddress"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lname" />
+
+    <EditText
+        android:id="@+id/psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Enter password"
+        android:inputType="textPassword"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Switch
+        android:id="@+id/branch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="Branch CE/IT"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/psw" />
+
+
+    -<RadioGroup
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:id="@+id/rdb_group"
+    app:layout_constraintTop_toBottomOf="@+id/psw"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:text="Male"
+        android:id="@+id/rdb_male"/>
+
+    <RadioButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:text="Female"
+        android:id="@+id/rdb_female"
+        android:checked="true"/>
+
+</RadioGroup>
+
+
+    -<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/linearLayout"
+    app:layout_constraintTop_toBottomOf="@+id/rdb_group"
+    android:orientation="vertical">
+
+    <Spinner
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/city"
+        android:layout_weight="1"
+        android:entries="@array/citylist"/>
+
+</LinearLayout>
+
+    <CheckBox
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="18sp"
+        android:text="Profile Status Active/Inactive"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:id="@+id/agree"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:background="#310239"
+        android:padding="10dp"
+        android:text="Register me"
+        android:textColor="#E8B4F1"
+        android:textColorHighlight="#310239"
+        android:textColorHint="#310239"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agree" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
